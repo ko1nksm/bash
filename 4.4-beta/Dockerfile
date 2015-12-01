@@ -3,7 +3,7 @@ FROM debian
 RUN apt-get -y update \
     && apt-get -y install wget build-essential bison autoconf \
     && mkdir /usr/local/src/bash \
-    && wget -qO- http://ftp.gnu.org/gnu/bash/bash-4.4-beta.tar.gz | tar zx -C /usr/local/src/bash --strip-components=1 \
+    && wget -qO- https://ftp.gnu.org/gnu/bash/bash-4.4-beta.tar.gz | tar zx -C /usr/local/src/bash --strip-components=1 \
     && cd /usr/local/src/bash \
     && ./configure \
     && make -j"$(nproc)" \
