@@ -1,0 +1,10 @@
+--- lib/malloc/malloc.c.bak     2015-12-01 06:52:46.431608607 +0000
++++ lib/malloc/malloc.c 2015-12-01 06:53:26.280012220 +0000
+@@ -901,6 +901,7 @@
+   if (_malloc_nwatch > 0)
+     _malloc_ckwatch (mem, file, line, W_FREE, ubytes);
+ #endif
++  return;
+ }
+
+ static PTR_T
