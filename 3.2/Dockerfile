@@ -7,7 +7,7 @@ RUN apt-get -y update \
     && cd /usr/local/src/bash \
     && wget -qO- $(seq -f "https://ftp.gnu.org/gnu/bash/bash-3.2-patches/bash32-%03g" 57) | patch -p0 \
     && ./configure \
-    && make -j"$(nproc)" \
+    && make \
     && make install \
     && rm -rf /usr/local/src/bash \
     && rm /bin/bash \
