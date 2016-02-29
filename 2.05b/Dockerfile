@@ -1,4 +1,5 @@
 FROM debian
+MAINTAINER Koichi Nakashima <koichi@nksm.name>
 
 COPY patch /patch
 

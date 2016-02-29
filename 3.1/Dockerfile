@@ -1,4 +1,5 @@
 FROM debian
+MAINTAINER Koichi Nakashima <koichi@nksm.name>
 
 RUN apt-get -y update \
     && apt-get -y install wget build-essential bison \
