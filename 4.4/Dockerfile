@@ -6,6 +6,7 @@ RUN apt-get -y update \
     && mkdir /usr/local/src/bash \
     && wget -qO- https://ftp.gnu.org/gnu/bash/bash-4.4.tar.gz | tar zx -C /usr/local/src/bash --strip-components=1 \
     && cd /usr/local/src/bash \
+    && wget -qO- $(seq -f "https://ftp.gnu.org/gnu/bash/bash-4.4-patches/bash44-%03g" 23) | patch -p0 \
     && ./configure \
     && make \
     && make install \
